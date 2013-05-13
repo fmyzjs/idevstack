@@ -1,3 +1,6 @@
+'''
+by fmy 2013 based on Lion's code
+'''
 # vim: tabstop=4 shiftwidth=4 softtabstop=4
 from django.forms.util import ErrorList
 from django.utils.translation import ugettext as _
@@ -10,9 +13,6 @@ import commands
 """
 Forms used for Horizon's register mechanisms.
 """
-'''class BaseRegForm(forms.SelfHandlingForm):
-    def __init__(self, request, *args, **kwargs):
-        super(BaseRegForm, self).__init__(request, *args, **kwargs)'''
 class RegForm(forms.Form):
     """ Form used for logging in a user.
 
@@ -20,7 +20,7 @@ class RegForm(forms.Form):
     a scoped token token for that tenant. Redirects to the URL returned
     by :meth:`horizon.get_user_home` if successful.
 
-    Subclass of :class:`~horizon.forms.SelfHandlingForm`.
+    Subclass of :class:`~forms.Form`.
     """
     
     username = forms.CharField(label=_("User Name"), min_length=5, max_length=30, required=True)

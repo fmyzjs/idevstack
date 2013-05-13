@@ -1,5 +1,5 @@
 '''
-by fmy
+by fmy 2013 based on Lion's code
 '''
 import operator
 from django import shortcuts
